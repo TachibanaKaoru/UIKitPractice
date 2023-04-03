@@ -13,6 +13,7 @@
 		18E62C3829DAE79000F5A420 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E62C3629DAE79000F5A420 /* Main.storyboard */; };
 		18E62C3A29DAE79100F5A420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E62C3929DAE79100F5A420 /* Assets.xcassets */; };
 		18E62C3D29DAE79100F5A420 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E62C3B29DAE79100F5A420 /* LaunchScreen.storyboard */; };
+		18E62C4529DAEE1E00F5A420 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 18E62C4429DAEE1E00F5A420 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		18E62C3929DAE79100F5A420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E62C3C29DAE79100F5A420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E62C3E29DAE79100F5A420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E62C4429DAEE1E00F5A420 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		18E62C2429DAE79000F5A420 = {
 			isa = PBXGroup;
 			children = (
+				18E62C4429DAEE1E00F5A420 /* README.md */,
 				18E62C2F29DAE79000F5A420 /* Practice */,
 				18E62C2E29DAE79000F5A420 /* Products */,
 			);
@@ -77,6 +80,7 @@
 				18E62C2929DAE79000F5A420 /* Sources */,
 				18E62C2A29DAE79000F5A420 /* Frameworks */,
 				18E62C2B29DAE79000F5A420 /* Resources */,
+				18E62C4629DAEEB200F5A420 /* Swift Format */,
 			);
 			buildRules = (
 			);
@@ -127,11 +131,33 @@
 			files = (
 				18E62C3D29DAE79100F5A420 /* LaunchScreen.storyboard in Resources */,
 				18E62C3A29DAE79100F5A420 /* Assets.xcassets in Resources */,
+				18E62C4529DAEE1E00F5A420 /* README.md in Resources */,
 				18E62C3829DAE79000F5A420 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18E62C4629DAEEB200F5A420 /* Swift Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Format";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which /Users/toyship/Github/swift-format/.build/release/swift-format >/dev/null; \nthen\n  /Users/toyship/Github/swift-format/.build/release/swift-format lint -r Practice\nelse\n  echo \"warning: swift-format not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18E62C2929DAE79000F5A420 /* Sources */ = {
