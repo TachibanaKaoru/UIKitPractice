@@ -17,6 +17,9 @@ class ViewController: UIViewController {
 
         view.addSubview(tableView)
 
+        //背景をtableviewとあわせて目立たないようにする
+        view.backgroundColor = UIColor.groupTableViewBackground
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
