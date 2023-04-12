@@ -45,12 +45,14 @@ class ViewController: UIViewController {
         tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
 
+        self.title = "UIKit Practice"
+
     }
 
     private func prepareMenuItems() {
 
         let menuA1 = MenuItem(
-            title: "Fruit",
+            title: "Fruit 1",
             detail: "DiffableDataSource",
             itemFunction: {
                 print("A 1")
@@ -60,7 +62,7 @@ class ViewController: UIViewController {
             }
         )
 
-        let menuA2 = MenuItem(title: "Fruit", detail: "aa", itemFunction: {
+        let menuA2 = MenuItem(title: "Fruit 2", detail: "aa", itemFunction: {
             print("A 2")
         })
 
